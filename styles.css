@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+.wrapper {
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+}
+
+.header {
+    display:grid;
+    align-items: baseline;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "sub head search";
+    margin-bottom: 0.5rem;
+}
+
+#heading {
+    grid-area: head;
+    justify-self: center;
+}
+
+#sub {
+    grid-area: sub;
+    color: rgb(162, 162, 162);
+}
+
+.content {
+    display: grid;
+    grid-auto-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+    column-gap: 0.75rem;
+}
+
+.card {
+    background-color: whitesmoke;
+    border: 3px solid rgb(210, 207, 207);
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.cont {
+    justify-self: start;
+}
+
+.date {
+    color: rgb(162, 162, 162);
+}
+
+.head {
+    font-family: "fraunces", serif;
+}
+
+.ex {
+    color: blueviolet;
+}
+
+.post {
+    color: brown;
+}
+
+.world {
+    color: rgb(138, 70, 138);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.des {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(164, 104, 104);
+}
+
+.para {
+    margin-top: 0.3em;
+}
+#search-bar {
+    grid-area: search;
+    justify-self: end;
+    margin:0.5rem;
+}
+.parent {
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+@media(max-width:500px) {
+    .content {
+        display: grid;
+        grid-auto-rows:minmax(100px,auto);
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        column-gap: 0.75rem;
+    }
+}
