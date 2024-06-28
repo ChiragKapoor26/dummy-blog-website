@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* html, body {
+    height: 100%;
+    overflow: hidden;
+} */
+.wrapper {
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.5fr 9fr 0.5fr;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    grid-template-areas:
+    "headr"
+    "contet"
+    "foot";
+}
+.header {
+    grid-area: headr;
+    display:grid;
+    align-items: baseline;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "sub head search";
+    margin-bottom: 0.5rem;
+}
+#heading {
+    grid-area: head;
+    justify-self: center;
+}
+#sub {
+    grid-area: sub;
+    color: rgb(162, 162, 162);
+}
+#search-bar {
+    grid-area: search;
+    justify-self: end;
+    margin:0.5rem;
+}
+.content {
+    grid-area: contet;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left right";
+}
+/* Styling of left Part of the web page */
+.main {
+    grid-area: left;
+}
+#heading1 {
+    font-weight: 600;
+    font-family: "fraunces",serif;
+    font-size: 2.25rem;
+    margin-top:0.25rem ;
+    margin-bottom:0.25rem ;
+}
+#date {
+    color:gray;
+    margin-bottom: 1rem;
+}
+.author {
+    color:blue;
+}
+.important {
+    border:1px solid black;
+    padding-bottom: 0.5rem;
+}
+#heading2 {
+    font-weight: 400;
+    font-family: "fraunces",serif;
+    font-size: 1.75rem;
+    margin-bottom:0.5rem ;
+}
+.heading3 {
+    font-weight: 400;
+    font-family: "fraunces",serif;
+    font-size: 1.5rem;
+    margin-bottom:0.5rem ;
+}
+#example {
+    border:1px solid black;
+    font-family: code-pro;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+ul,ol {
+    margin-left: 1.5rem;
+}
+/* Styling of right part of the web page */
+.headright {
+    font-weight:700;
+    font-size: 1.2rem;
+}
+.achivements {
+    grid-area: right;
+    display:grid;
+    grid-template-rows:1fr 2fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "about"
+    "archive"
+    "elsewhere"
+    ;
+    margin-left: 0.5rem;
+    height:50vh;
+}
+.about {
+    grid-area: about;
+    border:1px solid whitesmoke;
+    background-color: whitesmoke;
+    padding:1em;
+}
+.elsewhere {
+    grid-area: elsewhere;
+    display: flex;
+    flex-direction: column;
+    padding-left:1em;
+}
+#else {
+    margin-bottom: 0.25em;
+}
+.archives {
+    grid-area: archive;
+    padding-left:1em;
+    display: flex;
+    flex-direction: column;
+    margin-top:1em;
+    margin-bottom:1em;
+}
+#arch {
+    margin-bottom: 0.25em;
+}
+/* Styling for footer section */
+button {
+    scale:1.03;
+    outline: none;
+    border:1px solid black;
+    border-radius:1.5em;
+    padding:0.5em;
+    margin:1rem;
+    background-color: white;
+}
+#older {
+    border:1px solid blue;
+    color:violet;
+}
+#newer {
+    border:1px solid red;
+    color:orangered;
+}
+.footer {
+    grid-area: foot;
+    align-self: center;
+}
